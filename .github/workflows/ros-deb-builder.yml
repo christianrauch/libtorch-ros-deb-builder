@@ -19,7 +19,7 @@ jobs:
           cmake --version
           sudo apt install -y nvidia-cuda-dev
 
-      - uses: jspricke/ros-deb-builder-action@main
+      - uses: christianrauch/ros-deb-builder-action@network
         with:
           ROS_DISTRO: humble
           DEB_DISTRO: jammy
