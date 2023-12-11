@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: christianrauch/ros-deb-builder-action@main
+      - uses: jspricke/ros-deb-builder-action@main
         with:
           ROS_DISTRO: humble
           DEB_DISTRO: jammy
