@@ -1,5 +1,9 @@
 repositories:
-  src/libtorch-colcon:
+  # src/libtorch-colcon:
+  #   type: git
+  #   url: https://github.com/christianrauch/libtorch-colcon.git
+  #   version: main
+  src/torch_cpp:
     type: git
-    url: https://github.com/christianrauch/libtorch-colcon.git
-    version: main
+    url: https://github.com/christian-rauch/torch_cpp_ci.git
+    version: v2
