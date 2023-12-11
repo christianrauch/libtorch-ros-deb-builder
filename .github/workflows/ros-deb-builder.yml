@@ -14,8 +14,10 @@ jobs:
 
     steps:
       - run: |
+          sudo apt update
           sudo apt install -y cmake
           cmake --version
+          sudo apt install -y nvidia-cuda-dev
 
       - uses: jspricke/ros-deb-builder-action@main
         with:
