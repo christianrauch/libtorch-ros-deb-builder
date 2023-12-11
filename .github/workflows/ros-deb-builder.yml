@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: christianrauch/ros-deb-builder-action@network
+        with:
+          ROS_DISTRO: humble
+          DEB_DISTRO: jammy
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
