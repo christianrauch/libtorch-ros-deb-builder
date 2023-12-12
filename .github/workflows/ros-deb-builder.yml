@@ -18,6 +18,8 @@ jobs:
           sudo apt install -y cmake
           cmake --version
           sudo apt install -y nvidia-cuda-dev
+          sudo rm -rf /opt/hostedtoolcache
+          df -h
 
       - name: free up space
         run: |
