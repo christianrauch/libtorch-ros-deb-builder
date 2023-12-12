@@ -35,5 +35,6 @@ jobs:
           SQUASH_HISTORY: true
 
       - name: check free space
+        if: always()
         run: |
           df -h
