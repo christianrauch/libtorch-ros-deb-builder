@@ -12,6 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-22.04
 
+    continue-on-error: true
+
     steps:
       - run: |
           sudo apt update
@@ -31,3 +33,7 @@ jobs:
           DEB_DISTRO: jammy
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SQUASH_HISTORY: true
+
+      - name: check free space
+        run: |
+          df -h
