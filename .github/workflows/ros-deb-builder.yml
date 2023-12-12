@@ -11,16 +11,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    container:
-      image: ubuntu:22.04
-      options: --privileged
+    # container:
+    #   image: ubuntu:22.04
+    #   options: --privileged
 
     continue-on-error: true
 
     steps:
       - run: |
-          apt update
-          apt install -y sudo
+          sudo apt update
+          sudo apt install -y sudo
           sudo apt install -y cmake
           cmake --version
           sudo apt install -y nvidia-cuda-dev
