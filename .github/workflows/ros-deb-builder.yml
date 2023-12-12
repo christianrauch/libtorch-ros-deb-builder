@@ -11,12 +11,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    container:
+      image: ubuntu:22.04
 
     continue-on-error: true
 
     steps:
       - run: |
-          sudo apt update
+          apt update
+          apt install -y sudo
           sudo apt install -y cmake
           cmake --version
           sudo apt install -y nvidia-cuda-dev
