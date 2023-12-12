@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     container:
       image: ubuntu:22.04
+      options: --privileged
 
     continue-on-error: true
 
@@ -25,6 +26,7 @@ jobs:
           sudo apt install -y nvidia-cuda-dev
 
       - name: free up space
+        shell: bash
         run: |
           bash <(curl -s https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh)
           sudo rm -rf /opt/hostedtoolcache
