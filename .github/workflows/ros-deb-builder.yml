@@ -19,6 +19,10 @@ jobs:
           cmake --version
           sudo apt install -y nvidia-cuda-dev
 
+      - name: free up space
+        run: |
+          bash <(curl -s https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh)
+
       - uses: christianrauch/ros-deb-builder-action@network
         with:
           ROS_DISTRO: humble
