@@ -11,19 +11,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    # container:
-    #   image: ubuntu:22.04
-    #   options: --privileged
+    container:
+      image: ubuntu:22.04
+      options: --privileged
+      volumes:
+        - /mnt:/__w/libtorch-ros-deb-builder
 
     continue-on-error: true
 
     steps:
       - run: |
-          sudo apt update
-          sudo apt install -y sudo
+          apt update
+          apt install -y sudo
           sudo apt install -y cmake
           cmake --version
           sudo apt install -y nvidia-cuda-dev
+          sudo apt install -y tree curl lsb-release software-properties-common
 
       - name: free up space
         shell: bash
@@ -32,13 +35,17 @@ jobs:
           sudo rm -rf /opt/hostedtoolcache
           df -h
 
+      - run: |
+          pwd
+          tree
+
       - uses: christianrauch/ros-deb-builder-action@network
         with:
           ROS_DISTRO: humble
           DEB_DISTRO: jammy
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SQUASH_HISTORY: true
-          WORKING_DIRECTORY: /mnt
+          # WORKING_DIRECTORY: /mnt
 
       - name: check free space
         if: always()
