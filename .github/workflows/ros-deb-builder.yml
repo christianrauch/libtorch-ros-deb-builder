@@ -21,6 +21,10 @@ jobs:
 
     steps:
       - run: |
+          chmod 777 /tmp
+          df -h
+
+      - run: |
           apt update
           apt install -y sudo
           sudo apt install -y cmake
