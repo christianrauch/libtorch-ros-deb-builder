@@ -15,7 +15,7 @@ jobs:
       image: ubuntu:22.04
       options: --privileged
       volumes:
-        - /mnt:/__w/libtorch-ros-deb-builder
+        - /mnt:/tmp
 
     continue-on-error: true
 
