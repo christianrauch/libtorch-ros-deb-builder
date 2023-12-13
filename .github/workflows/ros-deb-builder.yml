@@ -38,7 +38,7 @@ jobs:
           DEB_DISTRO: jammy
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SQUASH_HISTORY: true
-          # WORKING_DIRECTORY: /mnt
+          WORKING_DIRECTORY: /mnt
 
       - name: check free space
         if: always()
