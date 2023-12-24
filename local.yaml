@@ -1,0 +1,3 @@
+libtorch:
+  ubuntu:
+  - ros-humble-libtorch

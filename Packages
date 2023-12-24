@@ -1,0 +1,36 @@
+Package: ros-humble-libtorch-dbgsym
+Package-Type: ddeb
+Architecture: amd64
+Version: 0-2023.12.24.14.27
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: ros-humble-libtorch
+Maintainer: Christian Rauch <Rauch.Christian@gmx.de>
+Installed-Size: 1256924
+Depends: ros-humble-libtorch (= 0-2023.12.24.14.27)
+Filename: ./ros-humble-libtorch-dbgsym_0-2023.12.24.14.27_amd64.ddeb
+Size: 1187907766
+MD5sum: 31c578d48358ce59712e8acba7b36eb6
+SHA1: 7ac9d9e1875fb47363402c186fec165e6264927a
+SHA256: 1f02902883dac9ce97ca14e496956b3b56ee1f86178e99613d8d10cdce1edb8d
+SHA512: a09cbe498274edd69e3dacafae9d03474ccff9566220b68385e2e3d0d7b8006fae857b450a5c6e1c402fd47be9305d0c7731877c275fa2348d3095eac7518a0e
+Description: debug symbols for ros-humble-libtorch
+Build-Ids: 05f529918ec9f5f4bb1503981e535fb6dfd06bbb 377889f2197120ee71a698f67ced690e6d7f8616 7328d23e670b17573294210f5092c82599d8adfb 9254372878ae4b6dc3548ba372817f4146453d60
+
+Package: ros-humble-libtorch
+Architecture: amd64
+Version: 0-2023.12.24.14.27
+Priority: optional
+Section: misc
+Maintainer: Christian Rauch <Rauch.Christian@gmx.de>
+Installed-Size: 228574
+Depends: libc6 (>= 2.35), libgcc-s1 (>= 3.4), libgomp1 (>= 4.9), libstdc++6 (>= 12)
+Filename: ./ros-humble-libtorch_0-2023.12.24.14.27_amd64.deb
+Size: 44507166
+MD5sum: ccb40c240adfb04802e88a78127593ae
+SHA1: 8ad610034f28ac4492a8113395b8b04f720d4e2d
+SHA256: dd26d21cefda36aeacb9988fb6486365c4f18d50d748240d5c8a844438d54492
+SHA512: a2ca22f1dda99c76936d189b43fc9b7556f76481cf47113270268ff61e34495d818d56960380e78ba981dde256c44054bea6cb0a02ff1f1c0fe449b6a776487e
+Description: PyTorch C++ API
+
