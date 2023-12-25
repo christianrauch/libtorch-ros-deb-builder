@@ -2,4 +2,4 @@ repositories:
   src/libtorch-colcon:
     type: git
     url: https://github.com/christianrauch/libtorch-colcon.git
-    version: 5bce20b4a679207db8c92f1ef5264efa836d35c6
+    version: 2c71f8ce2dd423a5bfabb58a79c101ed928a669b
