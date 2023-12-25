@@ -24,13 +24,19 @@ jobs:
           chmod 777 /tmp
           df -h
 
-      - run: |
+      - name: install dependencies
+        run: |
           apt update
           apt install -y sudo
           sudo apt install -y cmake
           cmake --version
           sudo apt install -y nvidia-cuda-toolkit
           sudo apt install -y tree curl lsb-release software-properties-common
+
+      - name: test nvcc
+        run: |
+          which nvcc
+          nvcc --version
 
       # - name: free up space
       #   shell: bash
