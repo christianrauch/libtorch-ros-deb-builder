@@ -32,16 +32,16 @@ jobs:
           sudo apt install -y nvidia-cuda-toolkit
           sudo apt install -y tree curl lsb-release software-properties-common
 
-      - name: free up space
-        shell: bash
-        run: |
-          bash <(curl -s https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh)
-          sudo rm -rf /opt/hostedtoolcache
-          df -h
+      # - name: free up space
+      #   shell: bash
+      #   run: |
+      #     bash <(curl -s https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh)
+      #     sudo rm -rf /opt/hostedtoolcache
+      #     df -h
 
-      - run: |
-          pwd
-          tree
+      # - run: |
+      #     pwd
+      #     tree
 
       - run: |
           usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $(whoami)
