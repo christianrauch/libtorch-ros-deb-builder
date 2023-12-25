@@ -1,36 +1,36 @@
 Package: ros-humble-libtorch-dbgsym
 Package-Type: ddeb
 Architecture: amd64
-Version: 0-2023.12.24.23.44
+Version: 0-2023.12.25.02.04
 Auto-Built-Package: debug-symbols
 Priority: optional
 Section: debug
 Source: ros-humble-libtorch
 Maintainer: Christian Rauch <Rauch.Christian@gmx.de>
 Installed-Size: 1256924
-Depends: ros-humble-libtorch (= 0-2023.12.24.23.44)
-Filename: ./ros-humble-libtorch-dbgsym_0-2023.12.24.23.44_amd64.ddeb
-Size: 1187887498
-MD5sum: f43667d868c8b2a821bc48cf3624d444
-SHA1: 87d16b925c9257e1ba4d340f644f959069784e8a
-SHA256: 7ad302a141e59c416f779181c9fab7bf9191bdcce096aed6e810ba6f224f6920
-SHA512: 2187df208c211524ebeb4c71847629015162f1db46bcdc58e3fd28414230ef9e1f1290b8b6114f4ae9a0c9b27ef46413299ba76fd78e2a4a858f45a7f5c655c7
+Depends: ros-humble-libtorch (= 0-2023.12.25.02.04)
+Filename: ./ros-humble-libtorch-dbgsym_0-2023.12.25.02.04_amd64.ddeb
+Size: 1187879932
+MD5sum: 1189d0a4e1f149f833e503d2a5fd7364
+SHA1: 2fc0b11956ae35969ddbab57d7cb4c6371071030
+SHA256: 6f6478df0cb0b19dfe32547f67b3984ba53e62e90038cc39f24534889172bca2
+SHA512: 26007b745576f48136f45c530607dd2b930cfdb3ee15b0c0324422ae92d3aa4e837815c6ac1f88e5bbba2bfa70b8a19b46bfc15891e16508e3d26570b131c8b9
 Description: debug symbols for ros-humble-libtorch
-Build-Ids: 09a18ed0fa0add60d9f52dcf5c0013ed6c319553 536293afee03520f05e80ed9bd452d3a5e991515 5a4aa73eb90cb5b75a5e1cba5bae1eba0d63c8d1 d4670a7a537da458d0c17770734f1396c49b8f78
+Build-Ids: 2f5b3edf31d6081047a7143b427666533e9edc3e 313f4c76abba46bd13ba25542a357bcad2d35e48 396297c0c3e77e36e42850023f8b436013dffb00 d2f5b534fafab86fa62be149efec91dd1a3b721b
 
 Package: ros-humble-libtorch
 Architecture: amd64
-Version: 0-2023.12.24.23.44
+Version: 0-2023.12.25.02.04
 Priority: optional
 Section: misc
 Maintainer: Christian Rauch <Rauch.Christian@gmx.de>
-Installed-Size: 228573
+Installed-Size: 422229
 Depends: libc6 (>= 2.35), libgcc-s1 (>= 3.4), libgomp1 (>= 4.9), libstdc++6 (>= 12)
-Filename: ./ros-humble-libtorch_0-2023.12.24.23.44_amd64.deb
-Size: 44428576
-MD5sum: 1585557bdb0c2b454e54d8f97819a72a
-SHA1: 615dfc29012f80aedd5b5818a4cc370ba7435dd3
-SHA256: 85411938f064b5a52c3811db31168bbc863c5e6839959626a6fe705ec4207169
-SHA512: b1da8df78758187c097eb7e6eb8b1fe0c67b80ad340015f2d8fe15585e79b11bd4513fa163264c825c0626da32ac042e5e1bec6bcf574533bf7f728677da36c3
+Filename: ./ros-humble-libtorch_0-2023.12.25.02.04_amd64.deb
+Size: 62115662
+MD5sum: 655df75ae50070ce0d118343d5a0f3af
+SHA1: 9a2e1800c0280e92b430e15b70171e07a076105a
+SHA256: c5f4497bbd7a3e58c06306585e7a9741892680043bd9209d4e6eab56e74b8430
+SHA512: 430ec454331d97220518793751dc7a623648178adbc274345ea59c77180b800dd8b60f89089e4e55322bc730fbb4b5897156b5061386c1e61bbe2819ebab00b7
 Description: PyTorch C++ API
 
