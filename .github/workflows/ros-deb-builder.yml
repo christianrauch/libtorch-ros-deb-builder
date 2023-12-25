@@ -30,8 +30,9 @@ jobs:
           apt install -y sudo
           sudo apt install -y cmake
           cmake --version
-          sudo apt install -y nvidia-cuda-toolkit
           sudo apt install -y tree curl lsb-release software-properties-common
+          sudo apt install -y nvidia-cuda-toolkit python3-typing-extensions
+          sudo apt install -y g++-10 clang
 
       - name: test nvcc
         run: |
