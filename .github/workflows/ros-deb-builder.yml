@@ -53,7 +53,12 @@ jobs:
       - run: |
           usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $(whoami)
 
-      - uses: christianrauch/ros-deb-builder-action@network
+      - name: workaround got network access
+        run: |
+          sudo apt install -y libsbuild-perl
+          sudo sed -i "s/DISABLE_NETWORK.*/DISABLE_NETWORK => 0,/" /usr/share/perl5/Sbuild/Build.pm
+
+      - uses: jspricke/ros-deb-builder-action@main
         with:
           ROS_DISTRO: humble
           DEB_DISTRO: jammy
