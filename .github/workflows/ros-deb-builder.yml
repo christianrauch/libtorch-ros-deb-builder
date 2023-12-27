@@ -52,6 +52,7 @@ jobs:
           DEB_DISTRO: jammy
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SQUASH_HISTORY: true
+          SBUILD_CONF: "$extra_repositories = [ 'deb [trusted=yes] http://archive.ubuntu.com/ubuntu jammy multiverse', 'deb [trusted=yes] http://archive.ubuntu.com/ubuntu jammy restricted' ];"
           # keys for GCC 10:
           # https://github.com/ros/rosdistro/pull/39349
           ROSDEP_SOURCE: "yaml https://raw.githubusercontent.com/christianrauch/rosdistro/g%2B%2B-10/rosdep/base.yaml"
