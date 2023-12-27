@@ -46,6 +46,10 @@ jobs:
       - run: |
           usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $(whoami)
 
+      - name: list repos
+        run: |
+          cat /etc/apt/sources.list
+
       - uses: christianrauch/ros-deb-builder-action@network
         with:
           ROS_DISTRO: humble
